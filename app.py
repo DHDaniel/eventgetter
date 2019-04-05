@@ -5,7 +5,6 @@ app.config.from_envvar("APP_SETTINGS")
 
 @app.route('/')
 def index():
-    session["works"] = True
     return render_template('index.html')
 
 
