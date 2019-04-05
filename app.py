@@ -5,6 +5,7 @@ app.config.from_envvar("APP_SETTINGS")
 
 @app.route('/')
 def index():
+    print(request.args)
     if "eventbrite_token" in session:
         return render_template('events_list.html')
     else:
