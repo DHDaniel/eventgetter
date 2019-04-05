@@ -1,16 +1,16 @@
-from flask import Flask, session, request, render_template
+from flask import Flask, session, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 app.config.from_envvar("APP_SETTINGS")
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == "GET":
-        return session["works"]
+    if "eventbrite_token" in session:
+        return render_template('events_list.html')
     else:
-        return "This is the login page"
+        return redirect(url_for('login'))
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
