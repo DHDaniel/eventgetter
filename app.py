@@ -22,10 +22,10 @@ def login():
     if access_code:
         EVENTBRITE_SECRET = os.environ.get("EVENTBRITE_SECRET")
         EVENTBRITE_APP_KEY = os.environ.get("EVENTBRITE_APP_KEY")
-        data = {code: access_code,
-                client_secret: EVENTBRITE_SECRET,
-                client_id: EVENTBRITE_APP_KEY,
-                grant_type: "authorization_code"}
+        data = {"code": access_code,
+                "client_secret": EVENTBRITE_SECRET,
+                "client_id": EVENTBRITE_APP_KEY,
+                "grant_type": "authorization_code"}
         r = requests.post("https://www.eventbrite.com/oauth/token", data=data)
         response = r.json()
         print(response)
