@@ -14,4 +14,5 @@ def index():
 
 @app.route('/login')
 def login():
+    print(request.args)
     return render_template('login.html')
