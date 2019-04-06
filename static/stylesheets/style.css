@@ -29,7 +29,16 @@ html, body {
   border-radius: 8px;
 }
 /* line 22, ../sass/style.scss */
+#login-wrapper #login-box i {
+  color: #ec6f75;
+}
+/* line 25, ../sass/style.scss */
 #login-wrapper #login-box h3 {
   font-size: 35px;
   margin-top: 0px;
+}
+
+/* line 37, ../sass/style.scss */
+#event-container {
+  padding: 0px 0px 50px;
 }

@@ -19,6 +19,9 @@ html, body {
   height: 100vh;
 
   #login-box {
+    i {
+      color: #ec6f75;
+    }
     h3 {
       font-size: 35px;
       margin-top: 0px;
@@ -29,4 +32,8 @@ html, body {
     text-align: center;
     border-radius: 8px;
   }
+}
+
+#event-container {
+  padding: 0px 0px 50px;
 }
