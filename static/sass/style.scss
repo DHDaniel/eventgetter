@@ -3,6 +3,14 @@ html, body {
   background-color: #ededed;
 }
 
+#logout-button {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 20px 10px;
+}
+
 #login-wrapper {
   display: flex;
   align-items: center;
